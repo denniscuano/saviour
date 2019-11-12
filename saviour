@@ -9,7 +9,7 @@ killall ssh-agent
 
 killall rtkit-daemon 
 
-
+# you must have a pam file back up with your own configuration of how you want pam to work so you can import it to the /etc/pam.d/ folder .
 cd /home/ubuntu/Downloads && mv pam.d /etc/pam.d && updatedb && 
 
 touch slowdownuh.sh /usr/bin/ 
